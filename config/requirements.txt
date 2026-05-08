@@ -1,0 +1,27 @@
+# AIHub - 사내 AI 활용사례 수집 플랫폼
+# Python 3.13 기준 필수 의존성
+
+# 웹 프레임워크
+fastapi>=0.115.0
+uvicorn>=0.32.0
+
+# 데이터 검증
+pydantic>=2.9.0
+
+# 인증 (JWT)
+PyJWT>=2.9.0
+
+# 환경 변수
+python-dotenv>=1.0.0
+
+# 파일 업로드
+python-multipart>=0.0.6
+
+# 데이터베이스 (PMS - MSSQL)
+pymssql>=2.3.0
+
+# Excel 통계 내보내기
+openpyxl>=3.1.0
+
+# 테스트 (선택사항)
+pytest>=8.3.0

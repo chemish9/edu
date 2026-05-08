@@ -1,0 +1,29 @@
+# AIHub - 폐쇄망 설치를 위한 패키지 목록
+# Python 3.13 + Linux x86_64 기준
+
+# 필수 패키지 (wheel 파일 준비 필요)
+fastapi>=0.115.0
+uvicorn>=0.32.0
+pydantic>=2.9.0
+PyJWT>=2.9.0
+pymssql>=2.3.0
+openpyxl>=3.1.0
+
+# 위 패키지의 의존성 (자동 포함되지만 명시적 나열)
+starlette>=0.36.0
+pydantic-core>=2.20.0
+annotated-types>=0.6.0
+typing-extensions>=4.10.0
+typing-inspection>=0.4.0
+anyio>=4.0.0
+idna>=3.0
+h11>=0.14.0
+click>=8.0.0
+certifi>=2023.0.0
+et-xmlfile>=1.1.0
+
+# 테스트용 (선택사항)
+pytest>=8.3.0
+
+# 설치 방법:
+# pip install --no-index --find-links=target_packages -r packages.txt

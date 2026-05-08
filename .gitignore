@@ -1,0 +1,46 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Virtual environments
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Database
+data/aihub.db
+data/aihub.db.backup
+data/*.backup
+
+# Logs
+logs/*.log
+logs/*.pid
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Environment variables
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
