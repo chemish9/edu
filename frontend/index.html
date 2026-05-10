@@ -513,16 +513,365 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 	transform: translateY(-2px);
 	box-shadow: 0 4px 12px rgba(37,99,235,0.3);
 }
+
+/* ===== 2026 Renewal: Simple + shadcn-like ===== */
+:root {
+	--bg: #f7f9ff;
+	--surface: #ffffff;
+	--muted: #667085;
+	--text: #1d2939;
+	--border: #eaecf0;
+	--ring: rgba(71, 85, 105, 0.2);
+	--primary: #334155;
+	--primary-strong: #1e293b;
+	--radius: 16px;
+}
+
+body {
+	background:
+		radial-gradient(900px 420px at 6% -6%, rgba(210, 198, 255, 0.33), transparent 62%),
+		radial-gradient(780px 380px at 100% 0%, rgba(198, 245, 233, 0.4), transparent 60%),
+		linear-gradient(180deg, #fbfdff 0%, #f7f9ff 36%, #f8faff 100%);
+	color: var(--text);
+	line-height: 1.55;
+}
+
+.header {
+	background: rgba(255, 255, 255, 0.78);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid var(--border);
+	box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.header-inner,
+.hero-inner,
+.main {
+	max-width: 1240px;
+}
+
+.search input {
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	color: #344054;
+}
+
+.search input:focus,
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus,
+.comment-form textarea:focus {
+	box-shadow: 0 0 0 4px var(--ring);
+	border-color: #94a3b8;
+}
+
+.search-btn,
+.btn-cta {
+	background: linear-gradient(135deg, var(--primary) 0%, var(--primary-strong) 100%);
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(30, 41, 59, 0.2);
+}
+
+.btn-secondary {
+	border-radius: 12px;
+	border-color: var(--border);
+	color: #475467;
+}
+
+.hero {
+	background:
+		radial-gradient(700px 260px at 10% 0%, rgba(221, 214, 254, 0.36), transparent 62%),
+		radial-gradient(760px 300px at 92% 12%, rgba(204, 251, 241, 0.34), transparent 64%),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.86) 0%, rgba(246, 250, 255, 0.92) 70%, rgba(246, 248, 255, 1) 100%);
+	color: #1d2939;
+	padding: 34px 0 30px;
+	border-bottom: 1px solid var(--border);
+}
+
+.hero-actions {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.hero-action-card {
+	background: rgba(255, 255, 255, 0.9);
+	border: 1px solid #e2e8f0;
+	border-radius: 14px;
+	box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+	padding: 14px 12px;
+	text-align: center;
+	cursor: pointer;
+	transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.hero-action-card:hover {
+	transform: translateY(-2px);
+	border-color: #94a3b8;
+	box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+.hero-action-value {
+	font-size: 22px;
+	font-weight: 800;
+	line-height: 1.1;
+	color: #334155;
+	margin-bottom: 4px;
+}
+
+.hero-action-title {
+	font-size: 12px;
+	font-weight: 600;
+	color: #667085;
+}
+
+.main {
+	padding-top: 30px;
+	gap: 22px;
+}
+
+.chip {
+	background: #fcfcfd;
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	color: #475467;
+	font-weight: 600;
+}
+
+.chip.active {
+	background: #334155;
+	border-color: #334155;
+	color: #fff;
+}
+
+.sort-tabs {
+	border: 1px solid var(--border);
+	box-shadow: none;
+	border-radius: 12px;
+	background: #fcfcfd;
+}
+
+.sort-tab.active {
+	background: #334155;
+	color: #fff;
+}
+
+.case-grid {
+	gap: 14px;
+}
+
+.case-card,
+.sidebar > div,
+.dash-card,
+.chart-container,
+.admin-table,
+.modal-content,
+.recommend-area,
+.comment-section {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: 0 8px 28px rgba(16, 24, 40, 0.05);
+}
+
+.case-card {
+	padding: 18px;
+}
+
+.case-card:hover {
+	transform: translateY(-2px);
+	border-color: #cbd5e1;
+	box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.case-badge {
+	background: #f8fafc;
+	border: 1px solid #cbd5e1;
+	color: #334155;
+	border-radius: 999px;
+}
+
+.case-title {
+	font-size: 15px;
+}
+
+.case-summary {
+	color: var(--muted);
+}
+
+.tool-tag {
+	background: #f2f4f7;
+	color: #475467;
+	border: 1px solid #eaecf0;
+	border-radius: 999px;
+}
+
+.case-meta {
+	color: #94a3b8;
+}
+
+.sidebar h3,
+.detail-section-title,
+.form-section-title,
+.comment-section-title {
+	color: #1d2939;
+}
+
+.tag-cloud span {
+	background: #f8f9fc;
+	color: #475467;
+	border: 1px solid #eaecf0;
+}
+
+.tag-cloud span:hover {
+	background: #334155;
+	border-color: #334155;
+	color: #fff;
+}
+
+.tag-count {
+	background: #eaecf0;
+	color: #475467;
+}
+
+.tag-cloud span:hover .tag-count {
+	background: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+
+.detail-header {
+	background: linear-gradient(135deg, #334155 0%, #1e293b 58%, #475569 100%);
+	color: #fff;
+}
+
+.detail-title {
+	letter-spacing: -0.3px;
+}
+
+.effect-box {
+	background: #f0fdf4;
+	border-left: 4px solid #22c55e;
+	color: #166534;
+}
+
+.recommend-area {
+	background: #f8fafc;
+}
+
+.btn-recommend {
+	background: #fff;
+	border-radius: 10px;
+}
+
+.admin-tab.active {
+	background: #334155;
+	border-bottom-color: #334155;
+}
+
+.admin-table th {
+	background: #f8fafc;
+	color: #334155;
+}
+
+.modal-content {
+	overflow: hidden;
+}
+
+.toast {
+	border-radius: 999px;
+	background: #1d2939;
+	box-shadow: 0 12px 28px rgba(16, 24, 40, 0.22);
+}
+
+/* shadcn-like card primitives */
+.shadcn-card {
+	border-radius: 14px;
+	border: 1px solid #eaecf0;
+	background: #ffffff;
+	box-shadow: 0 4px 14px rgba(16, 24, 40, 0.04);
+}
+.shadcn-card-header {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 18px 20px 0;
+}
+.shadcn-card-title {
+	font-size: 14px;
+	font-weight: 600;
+	color: #1d2939;
+}
+.shadcn-card-description {
+	font-size: 12px;
+	color: #667085;
+}
+.shadcn-card-content {
+	padding: 16px 20px 20px;
+}
+
+.home-body-card .filter-bar {
+	margin-bottom: 14px;
+}
+
+.sidebar-card + .sidebar-card {
+	margin-top: 14px;
+}
+
+.header-inner {
+	display: grid;
+	grid-template-columns: 240px 1fr auto;
+	align-items: center;
+	gap: 12px;
+}
+
+.search {
+	margin-left: 0;
+	max-width: none;
+	width: 100%;
+}
+
+.user-name {
+	font-size: 13px;
+	font-weight: 600;
+	color: #344054;
+}
+
+.brand-title {
+	font-size: 16px;
+	font-weight: 700;
+	color: #334155;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+@media (max-width: 968px) {
+	.header-inner {
+		grid-template-columns: 1fr;
+		padding: 12px 14px;
+		gap: 8px;
+	}
+	.search {
+		order: 2;
+		width: 100%;
+	}
+	.user-area {
+		order: 3;
+		justify-self: end;
+	}
+	.hero {
+		padding-top: 38px;
+	}
+	.hero-actions {
+		grid-template-columns: 1fr;
+	}
+}
 </style>
 </head>
 <body>
 
 <header class="header">
 	<div class="header-inner">
-		<div class="logo" onclick="showView('home')" style="cursor:pointer;">
-			<img src="/static/image/mginfo_logo.png?t=20260416" alt="MG" class="logo-img" onerror="this.style.display='none'" ondblclick="showEasterEgg()">
-			<div class="logo-text" onclick="showView('home')">MG신용정보 AI Hub</div>
-		</div>
+		<div class="brand-title" onclick="showView('home')">MG신용정보 AI EDU 허브</div>
 		<div class="search">
 			<div class="search-input-wrap">
 				<svg class="search-icon" viewBox="0 0 24 24">
@@ -532,7 +881,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 			</div>
 			<button class="search-btn" onclick="doSearch()">검색</button>
 		</div>
-		<button class="btn-cta" onclick="openCaseForm()">+ 사례 등록</button>
 		<div class="user-area">
 			<div id="userBox"></div>
 		</div>
@@ -543,36 +891,57 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div id="view-home">
 	<section class="hero">
 		<div class="hero-inner">
-			<h1>우리 회사의 AI 혁신을 함께 만들어갑니다</h1>
-			<p>동료들의 AI 활용 노하우를 나누고, 더 스마트하게 일해요</p>
-			<div class="hero-stats">
-				<div class="hero-stat"><div class="hero-stat-num" id="statTotal">-</div><div class="hero-stat-label">총 등록 사례</div></div>
-				<div class="hero-stat"><div class="hero-stat-num" id="statMonth">-</div><div class="hero-stat-label">이번 달 신규</div></div>
-				<div class="hero-stat"><div class="hero-stat-num" id="statRec">-</div><div class="hero-stat-label">총 추천 수</div></div>
+			<div class="hero-actions">
+				<div class="hero-action-card" onclick="showView('home')">
+					<div class="hero-action-value" id="statTotal">-</div>
+					<div class="hero-action-title">총 등록사례</div>
+				</div>
+				<div class="hero-action-card" onclick="openCaseForm()">
+					<div class="hero-action-value">+</div>
+					<div class="hero-action-title">사례등록</div>
+				</div>
+				<div class="hero-action-card" onclick="goMyPageFromHero()">
+					<div class="hero-action-value">MY</div>
+					<div class="hero-action-title" id="myCaseLabel">내 사례</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<main class="main">
-		<div>
-			<div class="filter-bar" id="filterBar"></div>
-			<div class="sort-tabs">
-				<button class="sort-tab active" data-sort="popular" onclick="setSort('popular')">인기순</button>
-				<button class="sort-tab" data-sort="latest" onclick="setSort('latest')">최신순</button>
-				<button class="sort-tab" data-sort="trending" onclick="setSort('trending')">트렌딩</button>
-				<button class="sort-tab" data-sort="views" onclick="setSort('views')">조회순</button>
+		<div class="shadcn-card home-body-card">
+			<div class="shadcn-card-header">
+				<h2 class="shadcn-card-title">활용 사례 목록</h2>
+				<p class="shadcn-card-description">카테고리와 정렬을 선택해 원하는 사례를 빠르게 확인하세요.</p>
 			</div>
-			<div class="case-grid" id="caseGrid"></div>
+			<div class="shadcn-card-content">
+				<div class="filter-bar" id="filterBar"></div>
+				<div class="sort-tabs">
+					<button class="sort-tab active" data-sort="popular" onclick="setSort('popular')">인기순</button>
+					<button class="sort-tab" data-sort="latest" onclick="setSort('latest')">최신순</button>
+					<button class="sort-tab" data-sort="trending" onclick="setSort('trending')">트렌딩</button>
+					<button class="sort-tab" data-sort="views" onclick="setSort('views')">조회순</button>
+				</div>
+				<div class="case-grid" id="caseGrid"></div>
+			</div>
 		</div>
 		<aside class="sidebar" style="width:320px;flex-shrink:0;">
-			<div>
-				<h3>인기 사례 TOP 5</h3>
-				<div id="topList"></div>
+			<div class="shadcn-card sidebar-card">
+				<div class="shadcn-card-header">
+					<h3 class="shadcn-card-title">인기 사례 TOP 5</h3>
+				</div>
+				<div class="shadcn-card-content">
+					<div id="topList"></div>
+				</div>
 			</div>
-			<div style="background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);padding:20px;border-radius:12px;margin-top:20px;">
-				<h3 style="margin:0 0 12px 0;font-size:15px;color:#1e3a5f;">인기 태그</h3>
-				<div style="font-size:12px;color:#64748b;margin-bottom:10px;">클릭하여 관련 사례 찾기</div>
-				<div class="tag-cloud" id="tagCloud"></div>
+			<div class="shadcn-card sidebar-card">
+				<div class="shadcn-card-header">
+					<h3 class="shadcn-card-title">인기 태그</h3>
+					<p class="shadcn-card-description">클릭하여 관련 사례 찾기</p>
+				</div>
+				<div class="shadcn-card-content">
+					<div class="tag-cloud" id="tagCloud"></div>
+				</div>
 			</div>
 		</aside>
 	</main>
@@ -991,17 +1360,22 @@ async function init() {
 
 function renderUser() {
 	const box = document.getElementById('userBox');
+	const myCaseLabel = document.getElementById('myCaseLabel');
 	if (state.user) {
-		box.innerHTML = `<div style="display:flex;align-items:center;gap:8px;">
-			<div class="avatar">${state.user.name[0]}</div>
-			<span>${state.user.name}</span>
-			<button class="btn-secondary" style="padding:4px 10px;font-size:12px;" onclick="showView('mypage')">내 사례</button>
-			${state.user.is_admin ? '<button class="btn-secondary" style="padding:4px 10px;font-size:12px;" onclick="showView(\'admin\')">관리</button>' : ''}
-			<button class="btn-secondary" style="padding:4px 10px;font-size:12px;" onclick="logout()">로그아웃</button>
-		</div>`;
+		box.innerHTML = `<button class="btn-secondary" style="padding:4px 10px;font-size:12px;" onclick="logout()">로그아웃</button>`;
+		if (myCaseLabel) myCaseLabel.textContent = `${state.user.name} 사례`;
 	} else {
 		box.innerHTML = `<button class="btn-secondary" onclick="openLoginModal()">로그인</button>`;
+		if (myCaseLabel) myCaseLabel.textContent = '내 사례';
 	}
+}
+
+function goMyPageFromHero() {
+	if (!state.user) {
+		openLoginModal();
+		return;
+	}
+	showView('mypage');
 }
 
 function openLoginModal() {
@@ -1130,9 +1504,8 @@ async function loadStats() {
 	try {
 		const r = await fetch(API + '/reports/weekly');
 		const d = (await r.json()).data;
-		document.getElementById('statTotal').textContent = d.total_cases;
-		document.getElementById('statMonth').textContent = d.new_count;
-		document.getElementById('statRec').textContent = d.top.reduce((a,c)=>a+c.recommend_count,0) || '-';
+		const totalEl = document.getElementById('statTotal');
+		if (totalEl) totalEl.textContent = d.total_cases;
 	} catch {}
 }
 
@@ -1623,7 +1996,7 @@ async function loadAdmin() {
 		const deptBars = d.by_department.map(x => {
 			const max = Math.max(...d.by_department.map(y => y.n), 1);
 			const width = Math.round((x.n / max) * 100);
-			const colors = ['#2563eb','#f97316','#10b981','#ef4444','#8b5cf6','#f59e0b'];
+			const colors = ['#334155','#475569','#64748b','#94a3b8','#475569','#334155'];
 			const color = colors[d.by_department.indexOf(x) % colors.length];
 			return `<div style="display:flex;align-items:center;gap:12px;margin:8px 0;">
 				<span style="width:100px;font-size:13px;color:#64748b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${x.department}</span>
